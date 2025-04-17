@@ -1,0 +1,59 @@
+cat > .gitignore << 'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+
+# Mediul virtual
+my_env/
+venv/
+ENV/
+
+# Fișiere de mediu (conțin informații sensibile)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Directoare de dezvoltare
+staticfiles/
+.coverage
+htmlcov/
+
+# Directoare și fișiere specifice sistemului
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*~
+._*
+EOFcomenzi_git_hub.md
+comenzi_git_hub.md
+comenzi_git_hub.md
+comenzi_git_hub.md
+.env

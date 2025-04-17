@@ -1,0 +1,65 @@
+# Bază Django
+Django==4.2.8
+djangorestframework==3.14.0
+django-cors-headers==4.3.0
+django-filter==23.3
+django-allauth==0.57.0
+dj-rest-auth==4.0.1
+
+# Canale pentru WebSockets
+channels==4.0.0
+channels-redis==4.1.0
+daphne==4.0.0
+redis==5.0.1
+asgiref==3.7.2
+
+# Bază de date
+psycopg2-binary==2.9.9
+dj-database-url==2.1.0
+
+# Traducere și procesare limbaj
+deep-translator==1.11.4
+# Înlocuim googletrans cu o alternativă compatibilă
+# googletrans==4.0.0rc1
+google-trans-new==1.1.9
+azure-cognitiveservices-speech==1.32.1
+openai==1.3.5
+langdetect==1.0.9
+pycld2==0.41
+nltk==3.8.1
+
+# Procesare audio
+SpeechRecognition==3.10.0
+pydub==0.25.1
+ffmpeg-python==0.2.0
+librosa==0.10.1
+
+# Autentificare și securitate
+PyJWT==2.8.0
+django-oauth-toolkit==2.3.0
+cryptography==41.0.5
+python-dotenv==1.0.0
+
+# Processare asincronă
+celery==5.3.4
+flower==2.0.1
+django-celery-results==2.5.1
+django-celery-beat==2.5.0
+
+# Logging și monitorizare
+sentry-sdk==1.35.0
+django-prometheus==2.3.1
+django-debug-toolbar==4.2.0
+
+# Pentru development și testare
+pytest==7.4.3
+pytest-django==4.7.0
+coverage==7.3.2
+black==23.11.0
+flake8==6.1.0
+isort==5.12.0
+
+# Utilitare
+Pillow==10.1.0
+gunicorn==21.2.0
+whitenoise==6.5.0

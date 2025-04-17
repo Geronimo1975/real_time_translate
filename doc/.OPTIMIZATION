@@ -1,0 +1,103 @@
+# Principii de Design UX pentru Traducere și Asistare în Timp Real
+
+## Principii Fundamentale
+
+### 1. Reducerea Cogniției
+- Reducerea sarcinii cognitive a utilizatorilor prin simplificarea interfețelor, în special în timpul conversațiilor
+- Eliminarea distragerilor pentru a permite utilizatorilor să se concentreze pe conversație
+- Organizarea informațiilor traduse într-o ierarhie vizuală clară
+
+### 2. Transparență și Feedback
+- Oferirea feedback-ului vizual constant despre starea sistemului de traducere
+- Indicatoare clare pentru când microfonul este activ
+- Afișarea calității conexiunii și a statelor de procesare
+
+### 3. Control și Încredere
+- Oferirea controlului asupra procesului de traducere (pauză, reluare, corectare)
+- Crearea încrederii prin transparența privind acuratețea traducerii
+- Permiterea utilizatorilor să corecteze traducerile inexacte
+
+## Optimizări Specifice pentru Interviuri
+
+### 1. Fluxul de Interviu Optimizat
+- **Pre-interviu**: Configurare simplă, verificare tehnică, instrucțiuni clare
+- **În timpul interviului**: Interfață minimalistă care nu distrage atenția
+- **Post-interviu**: Acces facil la transcrieri, rezumate și feedback
+
+### 2. Reducerea Anxietății
+- Notificări subtile, nu intruzive, pentru a reduce anxietatea
+- Sugestii de răspuns care apar natural, fără să intimideze
+- Interfață calmă, cu spații albe suficiente și tipografie clară
+
+### 3. Suport Contextual
+- Sugestii de răspuns relevante pentru întrebările tipice de interviu
+- Opțiune de acces rapid la CV și materiale de referință
+- Instrucțiuni și indicații în funcție de etapa interviului
+
+## Design Vizual și Interacțiune
+
+### 1. Layout și Spațiere
+- Separarea clară între text original și text tradus
+- Identificarea vorbitorului clară și consistentă
+- Spațiere optimă între elemente pentru lizibilitate în situații de stres
+
+### 2. Scheme de Culori
+- Diferențierea subtilă între text original și tradus
+- Utilizarea culorilor pentru a indica stările sistemului (procesare, pauză, eroare)
+- Contrast ridicat pentru accesibilitate și citire în diverse condiții de iluminare
+
+### 3. Tipografie
+- Font cu lizibilitate ridicată pentru citire rapidă
+- Dimensiuni diferite pentru a indica ierarhia informațională
+- Spațiere optimă între rânduri pentru scanare rapidă a textului
+
+## Experiențe Specifice Rolurilor
+
+### 1. Pentru Candidați/Intervievați
+- Accentul pe sugestii de răspuns și termeni din domeniu
+- Interfață care reduce anxietatea și inspiră încredere
+- Vizualizarea clară a întrebărilor și contextului
+
+### 2. Pentru Recrutori/Intervievatori
+- Prezentarea clară a răspunsurilor candidatului
+- Instrumente de evaluare și luare de notițe integrate
+- Acces rapid la întrebări pre-definite și criterii de evaluare
+
+### 3. Pentru Participanți la Întâlniri
+- Identificarea clară a vorbitorului curent
+- Opțiuni de navigare rapidă în conversație
+- Instrumente de colaborare integrate (partajare documente, adnotări)
+
+## Feedback și Îmbunătățire Continuă
+
+### 1. Mecanisme de Feedback
+- Evaluarea calității traducerii direct în interfață
+- Raportarea ușoară a problemelor sau inexactităților
+- Butoane simple pentru apreciere/neapreciere a sugestiilor AI
+
+### 2. Personalizare Progresivă
+- Învățarea terminologiei preferate și stilului de comunicare
+- Personalizarea sugestiilor bazată pe feedback și utilizare anterioară
+- Ajustarea automată a nivelului de asistență în funcție de nevoi
+
+### 3. Adaptare Contextuală
+- Detectarea automată a contextului conversației (tehnic, HR, management)
+- Ajustarea sugestiilor și traducerilor pentru domeniul specific
+- Optimizarea experienței pentru diferite tipuri de întâlniri
+
+## Mobilitate și Adaptabilitate
+
+### 1. Design Responsiv
+- Experiență unitară pe toate dispozitivele (desktop, tablet, mobil)
+- Optimizare pentru utilizare în deplasare sau situații neașteptate
+- Tranziții fluide între dispozitive în timpul aceleiași sesiuni
+
+### 2. Optimizare pentru Bandă Limitată
+- Degradare elegantă în condiții de rețea slabă
+- Prioritizarea textului față de elementele vizuale complexe
+- Mod offline pentru funcționalități de bază
+
+### 3. Accesibilitate
+- Conformitate WCAG 2.1 AA pentru utilizatori cu dizabilități
+- Suport pentru cititoare de ecran și navigare cu tastatură
+- Design inclusiv pentru utilizatori cu diverse nevoi

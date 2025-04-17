@@ -1,0 +1,99 @@
+# Practici de Securitate și Confidențialitate pentru Aplicația de Traducere
+
+## 1. Securitatea Datelor
+
+### Criptare și Protecție
+- **Criptare în tranzit**: TLS 1.3 pentru toate conexiunile HTTP și WebSocket
+- **Criptare în repaus**: Toate datele sensibile stocate criptat (AES-256)
+- **Cheile de criptare**: Rotație automată a cheilor la fiecare 90 de zile
+- **Tokenizare**: Utilizarea tokenurilor temporare pentru accesul la sesiuni
+
+### Stocarea Datelor
+- **Separare date**: Separarea datelor utilizatorilor prin design
+- **Retenție limitată**: Transcrierile păstrate doar pentru perioada necesară
+- **Politica de ștergere**: Ștergere automată a transcrierilor după 30 de zile (plan Free/Basic) sau conform configurării clientului (Pro/Enterprise)
+
+## 2. Autentificare și Autorizare
+
+### Metode de Autentificare
+- **Autentificare multi-factor** pentru toți utilizatorii
+- **OAuth2** pentru integrări cu sisteme terțe
+- **JWT** (JSON Web Tokens) pentru gestionarea sesiunilor
+- **API Keys** cu permisiuni granulare pentru integrări
+
+### Control Acces
+- **RBAC** (Role-Based Access Control) cu roluri predefinite:
+  - Administrator
+  - Manager întâlniri
+  - Participant
+  - Auditor (doar vizualizare)
+- **Accesul la transcrieri** limitat la organizatorii întâlnirilor și participanți autorizați
+- **Logging** pentru toate acțiunile administrative
+
+## 3. Conformitate cu Reglementările
+
+### GDPR (Europa)
+- **Contracte DPA** (Data Processing Agreement) pentru clienți
+- **Mecanisme de consimțământ** pentru înregistrarea și transcrierea întâlnirilor
+- **Funcționalitate de export date** pentru cererile de portabilitate
+- **Proceduri de ștergere** pentru cererile de "drept de a fi uitat"
+
+### HIPAA (SUA - Sănătate)
+- **BAA** (Business Associate Agreement) pentru clienții din domeniul sănătății
+- **Audit logs** pentru conformitate HIPAA
+- **Enclave** de procesare separate pentru date medicale
+- **Criptare end-to-end** pentru sesiunile medicale
+
+### Confidențialitate Specifică Domeniului
+- **Mod confidențial**: Opțiune de a nu stoca transcrieri pentru discuții sensibile
+- **Ștergere audio**: Audio procesat în memoria volatilă, fără stocare permanentă
+- **Anonimizare**: Opțiuni de anonimizare automată a datelor personale în transcrieri
+
+## 4. Securitatea Infrastructurii
+
+### Platformă Cloud
+- **Securitate perimetrală**: Firewall, WAF, și protecție DDoS
+- **Scanare vulnerabilități**: Scanare automată săptămânală a infrastructurii
+- **Patch management**: Actualizări automate de securitate
+- **Monitorizare**: Sistem de detecție a intruziunilor și anomaliilor
+
+### Securitatea Containerelor
+- **Scanare imagini**: Verificarea vulnerabilităților în containere
+- **Politici least-privilege**: Containere cu permisiuni minime necesare
+- **Segmentare rețea**: Micro-segmentare pentru limitarea impactului unei potențiale breșe
+
+## 5. Securitatea Dezvoltării
+
+### DevSecOps
+- **SAST** (Static Application Security Testing) integrat în pipeline-ul CI/CD
+- **Dependency scanning** pentru vulnerabilități în bibliotecile externe
+- **Security code reviews** pentru toate modificările majore
+- **Penetration testing** trimestrial de către echipe externe
+
+## 6. Proceduri Operaționale
+
+### Gestionarea Incidentelor
+- **Plan de răspuns** la incidente de securitate
+- **Notificări de breșe** conform cerințelor GDPR și alte reglementări
+- **Exerciții de simulare** a incidentelor de securitate bianuale
+- **Post-mortem** și îmbunătățiri continue după incidente
+
+### Backup și Disaster Recovery
+- **Backup-uri** zilnice cu testare de restaurare lunară
+- **Multi-region redundancy** pentru disponibilitate ridicată
+- **RTO** (Recovery Time Objective): 1 oră
+- **RPO** (Recovery Point Objective): 15 minute
+
+## 7. Transparență și Control pentru Utilizator
+
+### Control asupra Datelor
+- **Panou de confidențialitate** pentru utilizatori, cu control granular
+- **Opțiuni de opt-in/opt-out** pentru sugestiile AI
+- **Vizibilitate** asupra datelor colectate și utilizării acestora
+- **Exportul și ștergerea** datelor direct din interfața utilizator
+
+### Informare
+- **Notificări vizibile** când o sesiune este înregistrată
+- **Termeni și condiții** specifici pentru fiecare funcționalitate
+- **Documentație transparentă** despre procesarea și stocarea datelor
+- **Avertismente** pentru utilizatorii care discută informații sensibile

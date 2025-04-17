@@ -1,0 +1,261 @@
+# API de Integrare pentru Platforma de Traducere și Interpretare
+
+## Prezentare Generală
+
+API-ul permite integrarea funcționalităților de traducere în timp real și asistare AI în aplicații terțe, LMS-uri sau sisteme de management pentru sănătate.
+
+## Autentificare
+
+Toate endpoint-urile necesită autentificare cu token API.
+
+```bash
+curl -H "Authorization: Bearer YOUR_API_KEY" https://api.traducere-interviuri.com/v1/meetings
+```
+
+## Endpoints
+
+### Meetings API
+
+#### Listare întâlniri
+
+```
+GET /api/v1/meetings
+```
+
+Parametri de query:
+- `status` (opțional): filtrare după status (scheduled, live, completed, cancelled)
+- `start_date` (opțional): filtrare după data de început (format: YYYY-MM-DD)
+- `end_date` (opțional): filtrare după data de sfârșit (format: YYYY-MM-DD)
+
+Exemplu răspuns:
+```json
+{
+  "meetings": [
+    {
+      "id": "meeting_12345",
+      "title": "Interviu Developer Python",
+      "status": "scheduled",
+      "start_time": "2025-04-20T14:30:00Z",
+      "source_language": "en",
+      "target_language": "ro",
+      "created_at": "2025-04-17T10:00:00Z",
+      "participants_count": 2
+    }
+  ],
+  "total": 1,
+  "page": 1,
+  "per_page": 10
+}
+```
+
+#### Creare întâlnire nouă
+
+```
+POST /api/v1/meetings
+```
+
+Exemplu cerere:
+```json
+{
+  "title": "Interviu Candidat Frontend",
+  "start_time": "2025-04-25T15:00:00Z",
+  "duration": 60,
+  "source_language": "en",
+  "target_language": "ro",
+  "participants": [
+    {"email": "candidat@example.com", "name": "Ion Popescu", "language": "ro"},
+    {"email": "recruiter@example.com", "name": "Jane Smith", "language": "en"}
+  ],
+  "settings": {
+    "enable_recording": true,
+    "enable_suggestions": true,
+    "meeting_type": "interview"
+  }
+}
+```
+
+#### Obținere token de acces pentru participanți
+
+```
+POST /api/v1/meetings/{meeting_id}/tokens
+```
+
+Exemplu cerere:
+```json
+{
+  "participant_email": "candidat@example.com",
+  "expiration_minutes": 120
+}
+```
+
+Exemplu răspuns:
+```json
+{
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+  "meeting_url": "https://app.traducere-interviuri.com/m/12345?token=eyJhbGc...",
+  "expires_at": "2025-04-25T17:00:00Z"
+}
+```
+
+### Transcript API
+
+#### Obținere transcriere întâlnire
+
+```
+GET /api/v1/meetings/{meeting_id}/transcript
+```
+
+Parametri query:
+- `format`: json, txt, srt, vtt (default: json)
+- `language`: codul ISO al limbii pentru transcriere (default: limba originală)
+
+#### Export transcriere în diferite formate
+
+```
+GET /api/v1/meetings/{meeting_id}/transcript/export
+```
+
+Parametri query:
+- `format`: pdf, docx, txt, srt (default: pdf)
+- `language`: codul ISO al limbii pentru export (default: limba originală)
+
+### API de Traducere
+
+#### Traducere text
+
+```
+POST /api/v1/translate
+```
+
+Exemplu cerere:
+```json
+{
+  "text": "Hello, how are you today?",
+  "source_language": "en",
+  "target_language": "ro"
+}
+```
+
+Exemplu răspuns:
+```json
+{
+  "translated_text": "Bună, cum ești astăzi?",
+  "detected_language": "en",
+  "confidence": 0.98
+}
+```
+
+### API de Integrare LMS
+
+#### Creare întâlnire din LMS
+
+```
+POST /api/v1/integrations/lms/meetings
+```
+
+Exemplu cerere:
+```json
+{
+  "lms_platform": "moodle",
+  "lms_course_id": "COURSE123",
+  "lms_meeting_id": "MEETING456",
+  "title": "Sesiune de mentorat lingvistic",
+  "start_time": "2025-04-30T13:00:00Z",
+  "duration": 45,
+  "instructor_email": "professor@university.edu",
+  "students": [
+    {"email": "student1@university.edu", "language": "fr"},
+    {"email": "student2@university.edu", "language": "de"}
+  ],
+  "source_language": "en",
+  "callback_url": "https://moodle.university.edu/api/callbacks/translation"
+}
+```
+
+#### Callback pentru actualizări LMS
+
+Sistemul LMS va primi callback-uri la URL-ul specificat la creare:
+
+```json
+{
+  "event_type": "meeting.completed",
+  "meeting_id": "meeting_789",
+  "lms_meeting_id": "MEETING456",
+  "transcript_url": "https://api.traducere-interviuri.com/v1/meetings/meeting_789/transcript",
+  "duration_minutes": 42,
+  "participants_joined": 2
+}
+```
+
+### API pentru Healthcare
+
+#### Creare sesiune medicală
+
+```
+POST /api/v1/healthcare/sessions
+```
+
+Include parametri pentru conformitate HIPAA și dicționare medicale specializate.
+
+## Webhook Events
+
+Sistemul poate trimite evenimente webhook la URL-uri configurate:
+
+- `meeting.created` - Când o întâlnire este creată
+- `meeting.started` - Când o întâlnire începe
+- `meeting.ended` - Când o întâlnire se termină
+- `participant.joined` - Când un participant se alătură
+- `participant.left` - Când un participant părăsește sesiunea
+- `transcript.ready` - Când transcrierea este disponibilă
+
+## Limitări Rate
+
+- Plan Free: 60 cereri/oră
+- Plan Basic: 300 cereri/oră
+- Plan Pro: 1000 cereri/oră
+- Plan Enterprise: Personalizat
+
+## Exemple de Integrare
+
+### Exemplu de integrare Python
+
+```python
+import requests
+
+API_KEY = "your_api_key"
+BASE_URL = "https://api.traducere-interviuri.com/v1"
+
+headers = {
+    "Authorization": f"Bearer {API_KEY}",
+    "Content-Type": "application/json"
+}
+
+# Creare întâlnire
+meeting_data = {
+    "title": "Interviu Tehnic",
+    "start_time": "2025-05-01T10:00:00Z",
+    "source_language": "en",
+    "target_language": "ro",
+    "participants": [
+        {"email": "candidat@example.com", "name": "Ion Popescu", "language": "ro"}
+    ]
+}
+
+response = requests.post(f"{BASE_URL}/meetings", json=meeting_data, headers=headers)
+meeting = response.json()
+print(f"Întâlnire creată: {meeting['id']}")
+
+# Generare token acces pentru participant
+token_data = {
+    "participant_email": "candidat@example.com",
+    "expiration_minutes": 120
+}
+
+response = requests.post(
+    f"{BASE_URL}/meetings/{meeting['id']}/tokens", 
+    json=token_data, 
+    headers=headers
+)
+access_info = response.json()
+print(f"URL pentru participant: {access_info['meeting_url']}")
+```

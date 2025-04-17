@@ -1,0 +1,135 @@
+# Strategia de Go-to-Market: Platforma de Traducere și Asistare în Timp Real
+
+## Segmentare Piață
+
+### Segmente Verticale Principale
+
+#### 1. Recrutare și HR
+- **Subgrupuri țintă**:
+  - Agenții de recrutare internaționale
+  - Departamente HR pentru companii multinaționale
+  - Platforme de recrutare online
+- **Valoare propusă**: Reducerea barierelor lingvistice în procesul de recrutare internațională, acces la un bazin global de talente, optimizarea procesului de interviu
+- **Factori de decizie**: Directori HR, Manageri de recrutare
+
+#### 2. Educație și Training
+- **Subgrupuri țintă**:
+  - Universități cu programe internaționale
+  - Platforme de e-learning
+  - Companii de training corporate
+- **Valoare propusă**: Facilitarea cursurilor multilingve, îmbunătățirea accesibilității pentru studenți internaționali, scalabilitate pentru programe educaționale
+- **Factori de decizie**: Directori IT educațional, Decani, Manageri de programe e-learning
+
+#### 3. Servicii Medicale
+- **Subgrupuri țintă**:
+  - Spitale și clinici cu pacienți internaționali
+  - Platforme de telemedicină
+  - Servicii de psihologie/psihiatrie
+- **Valoare propusă**: Îmbunătățirea comunicării medic-pacient, documentație medicală multilingvă, reducerea erorilor de comunicare în contextul medical
+- **Factori de decizie**: Directori medicali, Manageri IT medical, Directori de dezvoltare
+
+## Strategia de Prețuri
+
+### Structura Prețurilor
+
+#### 1. Model de Abonament Bazat pe Volum
+- **Free**: 60 minute/lună, maxim 2 participanți, fără sugestii AI
+- **Basic**: 19€/lună - 300 minute/lună, maxim 5 participanți, sugestii AI de bază
+- **Pro**: 49€/lună - 1000 minute/lună, participanți nelimitați, sugestii AI avansate
+- **Enterprise**: Personalizat, începând de la 499€/lună, cu SLA și suport dedicat
+
+#### 2. Add-ons Opționale
+- **Pachet medical**: +20€/lună - Conformitate HIPAA, dicționare medicale specializate
+- **Pachet educațional**: +15€/lună - Integrare LMS, funcționalități de evaluare
+- **Pachet HR**: +15€/lună - Șabloane de interviu, integrare ATS, sugestii speciale pentru recrutare
+
+#### 3. Strategia de Prețuri de Penetrare
+- Oferte introductive de 30% discount pentru primele 3 luni
+- Program de trimitere (referral) cu discount de 20% pentru ambele părți
+- Prețuri speciale pentru ONG-uri, instituții educaționale (-40%)
+
+## Canale de Distribuție
+
+### 1. Direct
+- **Site web** cu sistem de înregistrare și activare self-service
+- **Echipă de vânzări** pentru clienți Enterprise
+- **Demonstrații live** programate pentru prospecți
+
+### 2. Parteneri
+- **Integratori de sisteme** pentru sectorul medical și educațional
+- **Platforme de recrutare** - integrare cu ATS-uri populare
+- **LMS-uri** - integrare cu Moodle, Canvas, Blackboard etc.
+
+### 3. Marketplaces
+- **Integrare în G Suite Marketplace**
+- **Microsoft AppSource** pentru clienții Microsoft Teams
+- **Salesforce AppExchange** pentru CRM și integrare HR
+
+## Activități de Marketing
+
+### 1. Marketing Digital
+- **SEO optimizat** pentru termeni de căutare relevanți: "traducere interviu", "interpretare meeting", "asistent interviu AI"
+- **Content marketing** - blog despre comunicare multilingvă, studii de caz, ghiduri de utilizare
+- **SEM** - campanii Google Ads targetate pe verticale și intenții specifice
+
+### 2. Webinarii și Demonstrații
+- Webinarii lunare pe verticale specifice (HR, Educație, Medical)
+- Sesiuni "How-to" pentru maximizarea utilizării platformei
+- Demonstrații personalizate pentru clienți Enterprise
+
+### 3. Parteneriate Strategice
+- **Alianțe cu platforme de recrutare** (LinkedIn, Indeed)
+- **Parteneriate cu asociații profesionale** (HR, Medical, Educație)
+- **Co-marketing** cu furnizori de servicii complementare
+
+## Măsurare și Optimizare
+
+### 1. KPI Principali
+- **CAC** (Cost of Acquisition) pe verticală și canal
+- **LTV** (Lifetime Value) pe segment de client
+- **Conversion Rate** pe canal și campanie
+- **NPS** (Net Promoter Score) pentru feedback-ul clienților
+
+### 2. Experimentare
+- A/B testing continuu pentru landing pages și mesaje
+- Experimentare cu prețuri și pachete pentru optimizare
+- Testarea de noi verticale și cazuri de utilizare
+
+### 3. Analiză Comportamentală
+- Tracking utilizare pentru identificarea funcționalităților valoroase
+- Analiză a pattern-urilor de abandon pentru îmbunătățirea retenției
+- Segmentare comportamentală pentru marketing personalizat
+
+## Roadmap de Extindere
+
+### 1. Faza 1: Lansare și Validare (Primele 6 luni)
+- Focus pe segmentul de Recrutare și HR
+- MVP pentru primii early adopters
+- Validarea product-market fit și ajustări
+
+### 2. Faza 2: Extindere pe Verticale (6-18 luni)
+- Lansare pachet Educație și integrări LMS
+- Dezvoltare funcționalități pentru sectorul Medical
+- Expansiune geografică în Europa și America de Nord
+
+### 3. Faza 3: Scalare și Noi Cazuri de Utilizare (18+ luni)
+- Lansare API public pentru dezvoltatori
+- Extindere în regiuni noi (Asia, America Latină)
+- Dezvoltare funcționalități pentru noi verticale (Juridic, Guvernamental)
+
+## Strategia de Intrare pe Piață
+
+### 1. Lansare în Etape
+- **Private beta** cu 10-15 clienți selecționați din segmentul Recrutare
+- **Public beta** cu 50-100 de utilizatori, cu focus pe feedback
+- **Lansare oficială** după 3 luni de iterații bazate pe feedback
+
+### 2. Accelerarea Adopției
+- **Program de early adopters** cu prețuri speciale și acces prioritar la noi funcționalități
+- **Program de ambasadori** pentru profesioniști influenți din industrie
+- **Studii de caz** și testimoniale pentru reducerea fricțiunii la adopție
+
+### 3. Creștere Sustenabilă
+- **Strategie customer success** pentru maximizarea retenției
+- **Upsell și cross-sell** sistematic pentru clienții existenți
+- **Dezvoltare comunitate** de utilizatori pentru evangelizare organică
